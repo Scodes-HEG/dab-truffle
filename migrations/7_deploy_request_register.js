@@ -1,4 +1,5 @@
 var Oracle = artifacts.require("Oracle");
+
 var Contract = artifacts.require("RequestRegister");
 var id = 'request_register';
 
