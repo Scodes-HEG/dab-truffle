@@ -1,5 +1,6 @@
 pragma solidity ^0.5.11;
 
+
 contract Shared_Table {
 
   address public created_by;
