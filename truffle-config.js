@@ -1,4 +1,5 @@
 module.exports = {
+
   networks: {
     development: {
       host: "0.0.0.0",
@@ -6,4 +7,5 @@ module.exports = {
       network_id: "5777"
     }
   }
+
 };
