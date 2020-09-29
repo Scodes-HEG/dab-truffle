@@ -144,11 +144,11 @@ export default {
         await this.$store.dispatch('oracle/getContractInstance');
         this.$store.dispatch('request/getContractInstance');
         this.$store.dispatch('request_register/getContractInstance');
-        this.$store.dispatch('requerant_dab_contract_register/getContractInstance');
-        this.$store.dispatch('requerant_dab_contract/getContractInstance');
-        await this.$store.dispatch('admins/getContractInstance');
-        await this.$store.dispatch('user/getUserInfo');
-        await this.$store.dispatch('model/init');
+        // this.$store.dispatch('requerant_dab_contract_register/getContractInstance');
+        // this.$store.dispatch('requerant_dab_contract/getContractInstance');
+        // await this.$store.dispatch('admins/getContractInstance');
+        // await this.$store.dispatch('user/getUserInfo');
+        // await this.$store.dispatch('model/init');
       });
 
       WEB3_BUS.$on('updated', async () => {

@@ -1,5 +1,5 @@
 import Web3 from 'web3'
-import ORACLE from '~/services/constants/oracle'
+import ORACLE_COMPILED from '~/build/contracts/Oracle'
 import { ETHERSCAN_URL } from '~/services/ethereum';
 import { Notifier } from '~/services/notifier.js';
 import {WEB3_BUS} from '~/services/web3';
@@ -41,16 +41,19 @@ export const mutations = {
 
 export const actions = {
   async getContractInstance (context) {
+    let web3Instance = await context.rootGetters['web3/getInstance'];
+    let contractAddress = ORACLE_COMPILED.networks[web3Instance.networkId].address;
+
     let getContract = new Promise(function (resolve, reject) {
       let web3 = new Web3(window.web3.currentProvider);
-      let sharedTableContractInstance = new web3.eth.Contract(ORACLE.abi, ORACLE.address);
+      let sharedTableContractInstance = new web3.eth.Contract(ORACLE_COMPILED.abi, contractAddress);
       resolve(sharedTableContractInstance)
     });
 
     try {
       let contract = await getContract;
       let address = await contract._address;
-      context.commit('registerContractNetwork', ORACLE.network);
+      context.commit('registerContractNetwork', web3Instance.networkId);
       context.commit('registerContractAddress', address);
       context.commit('registerContractInstance', contract);
       context.dispatch('listen');

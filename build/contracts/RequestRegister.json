@@ -11375,12 +11375,13 @@
         }
       },
       "links": {},
-      "address": "0x9148834e22C69F45205ccA224Df59AD1EFE4e7e4",
-      "transactionHash": "0x12c8b2dbb91c280333b163cabf2db386977f4592d659919ebbb4ce2c0f3cb739"
+      "address": "0xE68e9726e87F4720AA0Cf43f587A7f6551E4c7B2",
+      "transactionHash": "0xd42038406a118ff48c93a10f986e821f08430da6c7cf93fccb03b503c7d27545"
     }
   },
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-09-29T12:52:31.959Z",
+  "updatedAt": "2020-09-29T16:02:26.921Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },

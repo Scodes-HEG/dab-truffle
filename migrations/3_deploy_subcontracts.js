@@ -28,10 +28,10 @@ module.exports = async function(deployer) {
   oracleInst = instances[0];
 
   await Promise.all([
-      oracleInst.write('admins', instances[1].address),
-      oracleInst.write('dab', instances[2].address),
-      oracleInst.write('requerants', instances[3].address),
-      oracleInst.write('requerant_dab_contract_register', instances[4].address),
-      oracleInst.write('request_register', instances[5].address),
+      oracleInst.write('Admins', instances[1].address),
+      oracleInst.write('Dab', instances[2].address),
+      oracleInst.write('Requerants', instances[3].address),
+      oracleInst.write('ContractRegister', instances[4].address),
+      oracleInst.write('RequestRegister', instances[5].address),
     ])
 };

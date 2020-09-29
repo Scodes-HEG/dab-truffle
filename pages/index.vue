@@ -22,7 +22,7 @@ $<template>
         Toutes les informations partagées de cette application le sont stockées de façons décentralisée.
         <br/>
         <ul>
-          <li>Un smart contract central appelé "<strong>Oracle</strong>" est stockée sur le réseau "<strong>{{networkName}}</strong>".
+          <li>Un smart contract central appelé "<strong>Oracle</strong>" est stockée sur la blockchain.
           <br/>Cet Oracle est un registre central permettant de stocker les adresses des autres Smart Contract.
           <br/>Toutes les données de l'Oracle sont déployés dans <a v-bind:href="$store.state.oracle.contract.url" target="_blank">le Smart Contract {{$store.state.oracle.contract.address}}</a></li>
           <li>

@@ -5365,12 +5365,13 @@
         }
       },
       "links": {},
-      "address": "0x4D7cf279d1979a35833c8F9696D8e95618Cd1713",
-      "transactionHash": "0x8c81691da1b58bf07270f62de6b46165774ba34f1a5b97821a55da0fc0ed6756"
+      "address": "0x73588A4Eee10c5B95724699F9008468829e97095",
+      "transactionHash": "0x7819e5ac9231abd140a83887c9e17c127ac1267b678de1fe4ac80458fb129162"
     }
   },
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-09-29T12:52:31.948Z",
+  "updatedAt": "2020-09-29T16:02:26.876Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
