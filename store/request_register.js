@@ -43,7 +43,6 @@ export const actions = {
     try {
       let contract = await getContract;
       let address = await contract._address;
-      let network = '5777';
       commit('registerContract', {
         network: rootState.web3.networkId,
         address: address,

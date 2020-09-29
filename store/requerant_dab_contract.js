@@ -1,5 +1,5 @@
 import Web3 from 'web3'
-import TABLE from '~/services/constants/requerant_dab_contract'
+import TABLE_COMPILED from '~/build/contracts/Contract';
 
 export const state = () => ({
   contract: {
@@ -21,9 +21,9 @@ export const actions = {
   async getContractInstance ({rootState, state, commit, dispatch}) {
     let getContract = new Promise(async function (resolve, reject) {
       let web3 = new Web3(window.web3.currentProvider);
-      let contractInstance = new web3.eth.Contract(TABLE.abi);
+      let contractInstance = new web3.eth.Contract(TABLE_COMPILED.abi);
 
-      let bytecode = '0x' + TABLE.bytecode.object;
+      let bytecode = TABLE_COMPILED.deployedBytecode;
       contractInstance.options.data = bytecode;
       resolve(contractInstance)
     });

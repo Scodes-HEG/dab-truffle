@@ -1,5 +1,6 @@
 import Web3 from 'web3'
 import TABLE from '~/services/constants/admins'
+import TABLE_COMPILED from '~/build/contracts/Admins';
 import { ETHERSCAN_URL } from '~/services/ethereum';
 import {WEB3_BUS} from '~/services/web3';
 import { IPFS_MANAGER } from '~/services/ipfs';
@@ -47,7 +48,7 @@ export const mutations = {
 export const actions = {
   async getContractInstance ({rootState, state, commit, dispatch}) {
     let oracleContractInstance = await rootState.oracle.contract.instance();
-    let address = await oracleContractInstance.methods.read(TABLE.identifier).call();
+    let address = await oracleContractInstance.methods.read(TABLE_COMPILED.contractName).call();
 
     let getContract = new Promise(function (resolve, reject) {
       let addressToCall = state.contract.address;
@@ -56,7 +57,7 @@ export const actions = {
       }
 
       let web3 = new Web3(window.web3.currentProvider);
-      let contractInstance = new web3.eth.Contract(TABLE.abi, addressToCall);
+      let contractInstance = new web3.eth.Contract(TABLE_COMPILED.abi, addressToCall);
       resolve(contractInstance)
     });
 
@@ -64,14 +65,14 @@ export const actions = {
       let contract = await getContract;
       let address = await contract._address;
       commit('registerContract', {
-        network: TABLE.network,
+        network: rootState.web3.networkId,
         address: address,
         contract: contract,
       });
-    } catch(e) {}
-
-    dispatch('readRemote');
-    dispatch('listen');
+    } catch(e) {
+      dispatch('readRemote');
+      dispatch('listen');
+    }
   },
   async readRemote ({state, commit}) {
     let instance = await state.contract.instance();

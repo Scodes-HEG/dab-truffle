@@ -31,6 +31,7 @@ export const actions = {
     let address = rootState.web3.coinbase;
     let adminContractInstance = await rootState.admins.contract.instance;
 
+    console.log('TO DO ON ETUDIE LE REQUERANT ET TOUT');
     let requerantAccount = this.$model.requerants().getAccount(address);
     commit('registerReaquerantAccount', requerantAccount);
 
