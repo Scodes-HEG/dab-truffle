@@ -58,7 +58,7 @@ $<template>
   import DAB from '~/build/contracts/Dab';
   import ADMINS from '~/build/contracts/Admins';
   import REQUERANTS from '~/build/contracts/Requerants';
-  import REQUERANT_CONTRACT_REGISTER from '~/build/contracts/Contract';
+  import REQUERANT_CONTRACT_REGISTER from '~/build/contracts/ContractRegister';
   import REQUEST_REGISTER from '~/build/contracts/RequestRegister';
   import ORACLE from '~/build/contracts/Oracle';
   import {WEB3_BUS} from '~/services/web3';
