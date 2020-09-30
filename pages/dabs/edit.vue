@@ -9,7 +9,7 @@
 <script>
   import editTable from '~/components/editTable';
   export default {
-    layout: 'dab',
+    layout: 'default',
     components: {
       editTable
     }

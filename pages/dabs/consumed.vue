@@ -14,7 +14,7 @@
 <script>
   import dabTable from '~/components/partials/dabTable';
   export default {
-    layout: 'dab',
+    layout: 'default',
     components: {
       dabTable
     }

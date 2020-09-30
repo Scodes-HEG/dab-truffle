@@ -6,7 +6,7 @@ import { ETHERSCAN_URL } from '~/services/ethereum';
 import {LOADER_TURN_ON, LOADER_TURN_OFF} from '~/services/loader.js';
 import {WEB3_BUS} from '~/services/web3';
 import Web3 from 'web3'
-import REQUEST_TABLE from '~/services/constants/request'
+import REQUEST_TABLE from '~/build/contracts/RequestRegister';
 
 let waitingForConfirmation = false;
 

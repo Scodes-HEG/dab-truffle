@@ -70,7 +70,6 @@
         this.pools = this.$store.state.model.dab.data.remote.pools;
 
         this.dabArray = this.$model.dab().getRemoteDABArray();
-        console.log(this.dabArray);
       },
       submitContract(event) {
         event.preventDefault();

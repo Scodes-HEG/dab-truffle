@@ -24,10 +24,7 @@ export default {
   ** Customize the generated output folder
   */
   generate: {
-    dir: 'public',
-    routes: [
-      '/smartcontracts/dab',
-    ]
+    dir: 'public'
   },
 
 
@@ -69,5 +66,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+
   }
 }

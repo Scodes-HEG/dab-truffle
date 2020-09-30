@@ -9,7 +9,7 @@
 <script>
   import proposalList from '~/components/proposalList';
   export default {
-    layout: 'dab',
+    layout: 'default',
     components: {
       proposalList
     }

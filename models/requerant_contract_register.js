@@ -5,7 +5,6 @@ import { Notifier } from '~/services/notifier.js';
 import { ETHERSCAN_URL } from '~/services/ethereum';
 import {LOADER_TURN_ON, LOADER_TURN_OFF} from '~/services/loader.js';
 import {WEB3_BUS} from '~/services/web3';
-import CONTRACT from '~/services/constants/requerant_dab_contract';
 import Web3 from 'web3'
 
 let waitingForConfirmation = false;

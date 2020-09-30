@@ -72,7 +72,6 @@
 </template>
 
 <script>
-import ORACLE from '~/services/constants/oracle';
 import { mapGetters } from 'vuex';
 import { IPFS_MANAGER } from '~/services/ipfs';
 import { NETWORKS } from '~/services/constants/ethereum_networks';
@@ -96,13 +95,7 @@ export default {
       isLoading: true,
       isLoadingFullPage: true,
       canCancel: false,
-      oracleNetworkId: null,
-      oracleNetworkName: null,
     }
-  },
-  mounted() {
-    this.oracleNetworkName = NETWORKS[ORACLE.network];
-    this.oracleNetworkId   = ORACLE.network;
   },
   computed: {
     ...mapGetters({
