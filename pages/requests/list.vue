@@ -23,8 +23,11 @@
           />
         </table>
       </template>
+      <template v-else>
+        <h3>Aucune requête en cours</h3>
+      </template>
       <template v-if="accepteds.length > 0">
-        <h3>Requêtes acceptés</h3>
+        <h3>Requêtes acceptées</h3>
         <table>
           <tr>
             <th>#</th>
@@ -43,6 +46,9 @@
             :state="1"
           />
         </table>
+      </template>
+      <template v-else>
+        <h3>Aucune requête acceptée</h3>
       </template>
       <template v-if="refuseds.length > 0">
         <h3>Requêtes refusées</h3>
@@ -64,6 +70,9 @@
             :state="2"
           />
         </table>
+      </template>
+      <template v-else>
+        <h3>Aucune requête refusée</h3>
       </template>
     </div>
   </div>

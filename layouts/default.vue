@@ -10,10 +10,7 @@
       <li v-if="ipfsNode">Ipfs Node <strong>Connected - jsIPFS version: {{ipfsNodeVersion}}</strong></li>
       <li v-if="!web3 || !web3.isInjected">MetaMask is <strong>NOT CONNECTED</strong> (waiting...) - <a href="">REFRESH</a></li>
       <li v-if="web3 && web3.isInjected">MetaMask <strong>Connected</strong> to <strong>{{networkName}} ({{web3.networkId}})</strong></li>
-      <li v-if="web3 && web3.isInjected && (web3.networkId != oracleNetworkId)">
-        <strong style="color: red">BE CAREFUL: YOU SHOULD BE CONNECTED TO THE {{oracleNetworkName}} !</strong>
-      </li>
-      <li v-if="web3 && web3.isInjected">Ethereum Account n°<strong>{{web3.coinbase}}</strong></li>
+      <li v-if="web3 && web3.isInjected">Account <strong>{{web3.coinbase}}</strong></li>
       <hr/>
     </aside>
     <main>
@@ -148,7 +145,7 @@ export default {
         this.$store.dispatch('requerant_dab_contract/getContractInstance');
         await this.$store.dispatch('admins/getContractInstance');
         await this.$store.dispatch('user/getUserInfo');
-        // await this.$store.dispatch('model/init');
+        await this.$store.dispatch('model/init');
       });
 
       WEB3_BUS.$on('updated', async () => {

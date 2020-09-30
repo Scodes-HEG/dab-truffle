@@ -1,45 +1,50 @@
 <template>
   <div class="wrapper">
-    <h2>Liste des comptes requérants</h2>
-    <div v-if="!$store.state.model.requerants.read">Chargement...</div>
-    <table :key="stepReset" v-if="$store.state.model.requerants.read">
-      <tr>
-        <th>Email</th>
-        <th>Patronyme</th>
-        <th>Adresse</th>
-        <th>Contrats</th>
-        <th>Somme des DABs</th>
-      </tr>
-      <tr v-for="(account, index) in accounts">
-        <td>{{account.email}}</td>
-        <td>{{account.patronyme}}</td>
-        <td>{{account.address}}</td>
-        <td><ul>
-          <li v-if="!account.contracts">Chargement en cours...</li>
-          <li v-if="account.contracts && (account.contracts.length == 0)">Pas de contrat</li>
-          <li v-for="(contract, index) in account.contracts">
-            <strong><a target="_blank" :href="contract.url">{{contract.address}}</a></strong>
-            <button v-if="!contract.show" v-on:click="toggle(contract)">Voir <i class="fa fa-eye"></i></button>
-            <button v-if="contract.show" v-on:click="toggle(contract)">Cacher <i class="fa fa-eye-slash"></i></button>
-            <div v-if="contract.show">
-              <template v-if="!contract.data">
-                hash: {{contract.hash}}<br/>
-              </template>
-              <template v-if="contract.data">
-                <ul>
-                  <li><strong>Parcelle</strong>: {{contract.data.parcelle.id}}</li>
-                  <li><strong>Pool</strong>: {{contract.data.pool.pool}}</li>
-                  <li><strong>DAB</strong>: {{contract.data.dab}}</li>
-                  <li><pre>{{contract.data.info}}</pre></li>
-                </ul>
-              </template>
-            </div>
+    <template v-if="accounts.length < 1">
+      <h2>Aucun compte requérant pour le moment</h2>
+    </template>
+    <template v-else>
+      <h2>Liste des comptes requérants</h2>
+      <div v-if="!$store.state.model.requerants.read">Chargement...</div>
+      <table :key="stepReset" v-if="$store.state.model.requerants.read">
+        <tr>
+          <th>Email</th>
+          <th>Patronyme</th>
+          <th>Adresse</th>
+          <th>Contrats</th>
+          <th>Somme des DABs</th>
+        </tr>
+        <tr v-for="(account, index) in accounts">
+          <td>{{account.email}}</td>
+          <td>{{account.patronyme}}</td>
+          <td>{{account.address}}</td>
+          <td><ul>
+            <li v-if="!account.contracts">Chargement en cours...</li>
+            <li v-if="account.contracts && (account.contracts.length == 0)">Pas de contrat</li>
+            <li v-for="(contract, index) in account.contracts">
+              <strong><a target="_blank" :href="contract.url">{{contract.address}}</a></strong>
+              <button v-if="!contract.show" v-on:click="toggle(contract)">Voir <i class="fa fa-eye"></i></button>
+              <button v-if="contract.show" v-on:click="toggle(contract)">Cacher <i class="fa fa-eye-slash"></i></button>
+              <div v-if="contract.show">
+                <template v-if="!contract.data">
+                  hash: {{contract.hash}}<br/>
+                </template>
+                <template v-if="contract.data">
+                  <ul>
+                    <li><strong>Parcelle</strong>: {{contract.data.parcelle.id}}</li>
+                    <li><strong>Pool</strong>: {{contract.data.pool.pool}}</li>
+                    <li><strong>DAB</strong>: {{contract.data.dab}}</li>
+                    <li><pre>{{contract.data.info}}</pre></li>
+                  </ul>
+                </template>
+              </div>
 
-          </li>
-        </ul></td>
-        <td>{{account.dabTotal}}</td>
-      </tr>
-    </table>
+            </li>
+          </ul></td>
+          <td>{{account.dabTotal}}</td>
+        </tr>
+      </table>
+    </template>
   </div>
 </template>
 

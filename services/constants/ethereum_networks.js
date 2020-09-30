@@ -13,4 +13,6 @@ export const NETWORKS_ETHERSCAN = {
  '3': 'ropsten.etherscan.io',
  '4': 'rinkeby.etherscan.io',
  '42': 'kovan.etherscan.io',
+ '4447': 'truffle',
+ '5777': 'ganache'
 }

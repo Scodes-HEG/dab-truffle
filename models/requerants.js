@@ -64,7 +64,7 @@ export default (context) => () => ({
   async getList() {
     await context.store.dispatch('model/requerants/readContract');
 
-    return JSON.parse(JSON.stringify(context.store.state.model.requerants.data.remote.list));
+    return context.store.state.model.requerants.data.remote.list ? JSON.parse(JSON.stringify(context.store.state.model.requerants.data.remote.list)) : [];
   },
   getAccount(address) {
     let list = this._getRemoteList();

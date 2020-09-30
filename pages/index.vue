@@ -28,11 +28,11 @@ $<template>
           <li>
             Les Smart Contracts enregistrés dans l'Oracle sont les suivants:
             <ul>
-              <li><strong>Admins</strong> <a v-bind:href="$store.state.admins.contract.url" target="_blank">({{$store.state.admins.contract.address}})</a>: permet des gérer la liste des administrateurs du service. <template v-if="admins"><br/>-> Son identifiant dans le registre de l'oracle est "<strong>{{admins.identifier}}</strong>"</template></li>
-              <li><strong>Droit à bâtir</strong> <a v-bind:href="$store.state.model.dab.contract.url" target="_blank">({{$store.state.model.dab.contract.address}})</a>: gère les informations sur les droits à bâtir. <template v-if="dab"><br/>-> Son identifiant dans le registre de l'oracle est "<strong>{{dab.identifier}}</strong>"</template></li>
-              <li><strong>Requérants</strong> <a v-bind:href="$store.state.model.requerants.contract.url" target="_blank">({{$store.state.model.requerants.contract.address}})</a>: gère la liste des requérants. <template v-if="dab"><br/>-> Son identifiant dans le registre de l'oracle est "<strong>{{requerants.identifier}}</strong>"</template></li>
-              <li><strong>Le registre des contrats Requérants/Droits à bâtir</strong> <a v-bind:href="$store.state.requerant_dab_contract_register.contract.url" target="_blank">({{$store.state.requerant_dab_contract_register.contract.address}})</a>: Registre dans lequel est enregistré tous les contrats Requérants/Droits à bâtir. <template v-if="dab"><br/>-> Son identifiant dans le registre de l'oracle est "<strong>{{requerantsContractRegister.identifier}}</strong>"</template></li>
-              <li><strong>Le registre des requêtes</strong> <a v-bind:href="$store.state.request_register.contract.url" target="_blank">({{$store.state.request_register.contract.address}})</a>: Registre dans lequel est enregistré toutes les requêtes. <template v-if="dab"><br/>-> Son identifiant dans le registre de l'oracle est "<strong>{{requestRegister.identifier}}</strong>"</template></li>
+              <li><strong>Admins</strong> <a v-bind:href="$store.state.admins.contract.url" target="_blank">({{$store.state.admins.contract.address}})</a>: permet des gérer la liste des administrateurs du service. <template v-if="admins"><br/>-> Son identifiant dans le registre de l'oracle est "<strong>{{admins.contractName}}</strong>"</template></li>
+              <li><strong>Droit à bâtir</strong> <a v-bind:href="$store.state.model.dab.contract.url" target="_blank">({{$store.state.model.dab.contract.address}})</a>: gère les informations sur les droits à bâtir. <template v-if="dab"><br/>-> Son identifiant dans le registre de l'oracle est "<strong>{{dab.contractName}}</strong>"</template></li>
+              <li><strong>Requérants</strong> <a v-bind:href="$store.state.model.requerants.contract.url" target="_blank">({{$store.state.model.requerants.contract.address}})</a>: gère la liste des requérants. <template v-if="dab"><br/>-> Son identifiant dans le registre de l'oracle est "<strong>{{requerants.contractName}}</strong>"</template></li>
+              <li><strong>Le registre des contrats Requérants/Droits à bâtir</strong> <a v-bind:href="$store.state.requerant_dab_contract_register.contract.url" target="_blank">({{$store.state.requerant_dab_contract_register.contract.address}})</a>: Registre dans lequel est enregistré tous les contrats Requérants/Droits à bâtir. <template v-if="dab"><br/>-> Son identifiant dans le registre de l'oracle est "<strong>{{requerantsContractRegister.contractName}}</strong>"</template></li>
+              <li><strong>Le registre des requêtes</strong> <a v-bind:href="$store.state.request_register.contract.url" target="_blank">({{$store.state.request_register.contract.address}})</a>: Registre dans lequel est enregistré toutes les requêtes. <template v-if="dab"><br/>-> Son identifiant dans le registre de l'oracle est "<strong>{{requestRegister.contractName}}</strong>"</template></li>
             </ul>
           </li>
           <li>
@@ -55,12 +55,12 @@ $<template>
 
 <script>
   import { NETWORKS } from '~/services/constants/ethereum_networks';
-  import DAB from '~/services/constants/dab';
-  import ADMINS from '~/services/constants/admins';
-  import REQUERANTS from '~/services/constants/requerants';
-  import REQUERANT_CONTRACT_REGISTER from '~/services/constants/requerant_dab_contract_register';
-  import REQUEST_REGISTER from '~/services/constants/request_register';
-  import ORACLE from '~/services/constants/oracle';
+  import DAB from '~/build/contracts/Dab';
+  import ADMINS from '~/build/contracts/Admins';
+  import REQUERANTS from '~/build/contracts/Requerants';
+  import REQUERANT_CONTRACT_REGISTER from '~/build/contracts/Contract';
+  import REQUEST_REGISTER from '~/build/contracts/RequestRegister';
+  import ORACLE from '~/build/contracts/Oracle';
   import {WEB3_BUS} from '~/services/web3';
 
   export default {

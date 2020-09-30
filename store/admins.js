@@ -1,5 +1,4 @@
 import Web3 from 'web3'
-import TABLE from '~/services/constants/admins'
 import TABLE_COMPILED from '~/build/contracts/Admins';
 import { ETHERSCAN_URL } from '~/services/ethereum';
 import {WEB3_BUS} from '~/services/web3';

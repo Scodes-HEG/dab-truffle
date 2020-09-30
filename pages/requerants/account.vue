@@ -13,6 +13,7 @@
       <button type="submit"><i class="fa fa-save"></i> Enregistrer</button>
     </form>
     <hr/>
+    <template v-if="$store.state.user.info.is_requerant">
       <h2>Mes contrats</h2>
       <p v-if="!contratsLoaded">Contrats en cours de chargement...</p>
       <div v-if="contratsLoaded">
@@ -29,6 +30,7 @@
           </li>
         </ul>
       </div>
+    </template>
   </div>
 </template>
 

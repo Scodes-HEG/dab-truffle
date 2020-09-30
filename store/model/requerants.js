@@ -1,5 +1,5 @@
 import Web3 from 'web3'
-import TABLE from '~/services/constants/requerants'
+import TABLE_COMPILED from '~/build/contracts/Requerants';
 import { ETHERSCAN_URL } from '~/services/ethereum';
 import { IPFS_MANAGER } from '~/services/ipfs';
 import { Notifier } from '~/services/notifier.js';
@@ -22,7 +22,7 @@ export const state = () => ({
   },
   hash: null,
   data: {
-    remote: null
+    remote: {},
   },
   read: false,
   listen: {
@@ -73,7 +73,7 @@ export const mutations = {
 export const actions = {
   async getContractInstance ({rootState, state, commit, dispatch}) {
     let oracleContractInstance = await rootState.oracle.contract.instance();
-    let address = await oracleContractInstance.methods.read(TABLE.identifier).call();
+    let address = await oracleContractInstance.methods.read(TABLE_COMPILED.contractName).call();
 
     let getContract = new Promise(function (resolve, reject) {
       let addressToCall = state.contract.address;
@@ -82,14 +82,14 @@ export const actions = {
       }
 
       let web3 = new Web3(window.web3.currentProvider);
-      let contractInstance = new web3.eth.Contract(TABLE.abi, addressToCall);
+      let contractInstance = new web3.eth.Contract(TABLE_COMPILED.abi, addressToCall);
       resolve(contractInstance)
     });
 
     try {
       let contract = await getContract;
       let address = await contract._address;
-      commit('registerContractNetwork', TABLE.network);
+      commit('registerContractNetwork', rootState.web3.networkId);
       commit('registerContractAddress', address);
       commit('registerContractInstance', contract);
       dispatch('listen');
