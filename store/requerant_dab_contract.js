@@ -23,7 +23,7 @@ export const actions = {
       let web3 = new Web3(window.web3.currentProvider);
       let contractInstance = new web3.eth.Contract(TABLE_COMPILED.abi);
 
-      let bytecode = TABLE_COMPILED.deployedBytecode;
+      let bytecode = TABLE_COMPILED.bytecode;
       contractInstance.options.data = bytecode;
       resolve(contractInstance)
     });

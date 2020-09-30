@@ -68,10 +68,10 @@ export const actions = {
         address: address,
         contract: contract,
       });
-    } catch(e) {
-      dispatch('readRemote');
-      dispatch('listen');
-    }
+    } catch(e) {}
+
+    dispatch('readRemote');
+    dispatch('listen');
   },
   async readRemote ({state, commit}) {
     let instance = await state.contract.instance();

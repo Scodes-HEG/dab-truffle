@@ -53,10 +53,10 @@
     },
     created() {
       if (this.$store.state.model.requerants.read) {
-        // this.init();
+        this.init();
       } else {
         WEB3_BUS.$on('model-initialised', function() {
-          // this.init();
+          this.init();
         }.bind(this));
       }
     },
