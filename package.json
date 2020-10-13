@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "truffle compile && nuxt build",
+    "build:prod": "npm prune --production && npm install --production && nuxt build",
+    "build:dev": "nuxt build",
     "start": "nuxt start",
-    "generate": "truffle compile && nuxt generate"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
