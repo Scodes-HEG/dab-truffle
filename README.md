@@ -36,7 +36,7 @@ Une fois *Ganache* installé, lancez-le, nous allons créer une blockchain utili
 2. Associez le fichier "*truffle-config.js*" qui se trouve à la racine du dossier à votre nouveau workspace
 3. Vérifiez que dans **Accounts & Keys** le *ACCOUNT DEFAULT BALANCE* soit au moins égale à 10
 4. Sauvez le workspace et lancez le
-5. En image: ![ethereum](.\readme\ethereum.gif)
+5. En image: ![ethereum](./readme/ethereum.gif?raw=true)
 
 
 ## Configurer votre projet pour pouvoir déployer localement
@@ -49,7 +49,7 @@ Il vous faut le **host**, le **port** et l'**identifiant** de votre blockchain. 
 
 Dans l'image suivante, vous trouverez souligné en **rouge l'identifiant**, en **vert le host** et en **jaune le port** de votre blockchain
 
-![infos](.\readme\infos.PNG)
+![infos](./readme/infos.PNG?raw=true)
 
 
 
