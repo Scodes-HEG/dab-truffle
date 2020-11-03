@@ -13,7 +13,9 @@
     1. [Récupérer les informations](#toc-r%C3%A9cup%C3%A9rer-les-informations)
     1. [Éditer le fichier .env](#toc-%C3%89diter-le-fichier-env)
     1. [Testez votre configuration](#toc-testez-votre-configuration)
-1. [Build Setup](#toc-build-setup)
+1. [Lancez votre application en local](#toc-lancez-votre-application-en-local)
+    1. [La commande de déploiement local](#toc-la-commande-de-d%C3%A9ploiement-local)
+    1. [Configurer Metamask](#toc-configurer-metamask)
 
 <!-- /MarkdownTOC -->
 
@@ -99,24 +101,29 @@ Pour vérifier que tout est bien déployé sur votre blockchain locale, vous pou
 
 ![infos](./readme/deployeds.PNG?raw=true)
 
-<a id="toc-build-setup"></a>
+<a id="toc-lancez-votre-application-en-local"></a>
+## Lancez votre application en local
 
-<a id="toc-build-setup"></a>
-## Build Setup
+Une fois que tout est installé (`npm install`) et correctement déployé (`truffle migrate`) vous pouvez désormais lancer votre application en local.
 
-```bash
-# install dependencies
-$ npm install
+<a id="toc-la-commande-de-d%C3%A9ploiement-local"></a>
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+<a id="toc-la-commande-de-d%C3%A9ploiement-local"></a>
+### La commande de déploiement local
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+1. Lancez le serveur via la commande `$ npm run dev` à la racine du dossier 
 
-# generate static project
-$ npm run generate
-```
+2. Vous devriez voir une information du type 
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+   ```bash
+   Listening: http://localhost:3000/ 
+   ```
+
+3. Si la compilation se fait sans erreur, bravo, l'application est déployée.
+
+<a id="toc-configurer-metamask"></a>
+### Configurer Metamask
+
+Metamask est un plugin Firefox / Chrome permettant de gérer différents portefeuille et utilisateurs Ethereum.
+
+1. [Commencez par l'intaller](https://metamask.io/).
