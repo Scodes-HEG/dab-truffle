@@ -1,5 +1,5 @@
 {
-  "name": "heg_dab_nuxt",
+  "name": "Prototype HEG/DAB utilisant Truffle et Ganache",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,8 @@
     "build:prod": "npm prune --production && npm install --production && nuxt build",
     "build:dev": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "postinstall": "cp -n .env.dist .env"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.0",
@@ -29,7 +30,6 @@
     "web3": "^1.2.11"
   },
   "devDependencies": {
-    "truffle": "^5.1.46",
     "@nuxtjs/eslint-config": "^0.0.1",
     "ava": "^2.4.0",
     "babel-eslint": "^10.1.0",

@@ -7,9 +7,9 @@ module.exports = {
 
   networks: {
     development: {
-      host: "0.0.0.0",
-      port: 7545,
-      network_id: "5777"
+      host: env.parsed.LOCAL_BLOCKCHAIN_HOST ? env.parsed.LOCAL_BLOCKCHAIN_HOST : '0.0.0.0',
+      port: env.parsed.LOCAL_BLOCKCHAIN_PORT ? env.parsed.LOCAL_BLOCKCHAIN_PORT : '7545',
+      network_id: env.parsed.LOCAL_BLOCKCHAIN_ID ? env.parsed.LOCAL_BLOCKCHAIN_ID : '5777',
     },
 
     ropsten: {
