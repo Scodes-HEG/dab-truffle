@@ -1,17 +1,17 @@
 # Prototype HEG/DAB utilisant Truffle et Ganache
 
-<!-- MarkdownTOC levels="2,3"  autoanchor="true" autolink="true" -->
+<!-- MarkdownTOC levels="2,3"  autoanchor="true" autolink="true" style="ordered" -->
 
-- [Introduction](#introduction)
-- [Pré-requis](#pr%C3%A9-requis)
-  - [git et  npm](#git-et-npm)
-  - [Truffle](#truffle)
-  - [Ganache](#ganache)
-- [Installer le projet localement](#installer-le-projet-localement)
-- [Création d'une blockchain locale via Ganache](#cr%C3%A9ation-dune-blockchain-locale-via-ganache)
-- [Configurer votre projet pour pouvoir déployer localement](#configurer-votre-projet-pour-pouvoir-d%C3%A9ployer-localement)
-  - [Récupérer les informations](#r%C3%A9cup%C3%A9rer-les-informations)
-- [Build Setup](#build-setup)
+1. [Introduction](#introduction)
+1. [Pré-requis](#pr%C3%A9-requis)
+  1. [git et  npm](#git-et-npm)
+  1. [Truffle](#truffle)
+  1. [Ganache](#ganache)
+1. [Installer le projet localement](#installer-le-projet-localement)
+1. [Création d'une blockchain locale via Ganache](#cr%C3%A9ation-dune-blockchain-locale-via-ganache)
+1. [Configurer votre projet pour pouvoir déployer localement](#configurer-votre-projet-pour-pouvoir-d%C3%A9ployer-localement)
+  1. [Récupérer les informations](#r%C3%A9cup%C3%A9rer-les-informations)
+1. [Build Setup](#build-setup)
 
 <!-- /MarkdownTOC -->
 
