@@ -15,7 +15,10 @@
     1. [Testez votre configuration](#toc-testez-votre-configuration)
 1. [Lancez votre application en local](#toc-lancez-votre-application-en-local)
     1. [La commande de déploiement local](#toc-la-commande-de-d%C3%A9ploiement-local)
-    1. [Configurer Metamask](#toc-configurer-metamask)
+1. [Metamask](#toc-metamask)
+    1. [Installation](#toc-installation)
+    1. [Configuration du réseau de Ganache](#toc-configuration-du-r%C3%A9seau-de-ganache)
+    1. [Importez un compte de votre Blockchain](#toc-importez-un-compte-de-votre-blockchain)
 
 <!-- /MarkdownTOC -->
 
@@ -121,9 +124,40 @@ Une fois que tout est installé (`npm install`) et correctement déployé (`truf
 
 3. Si la compilation se fait sans erreur, bravo, l'application est déployée.
 
-<a id="toc-configurer-metamask"></a>
-### Configurer Metamask
+<a id="toc-metamask"></a>
+## Metamask
 
 Metamask est un plugin Firefox / Chrome permettant de gérer différents portefeuille et utilisateurs Ethereum.
 
-1. [Commencez par l'intaller](https://metamask.io/).
+<a id="toc-installation"></a>
+
+<a id="toc-installation"></a>
+### Installation
+
+[Commencez par l'intaller](https://metamask.io/).
+
+<a id="toc-configuration-du-r%C3%A9seau-de-ganache"></a>
+### Configuration du réseau de Ganache
+
+Il faut maintenant faire communiquer votre MetaMask avec votre blockchain déployé par Ganache.
+
+1. Ouvrez MetaMask pour installer un nouveau réseau:
+   ![infos](./readme/custom.gif?raw=true)
+
+2. Entrez y les valeurs suivantes:
+   ![infos](./readme/settings.jpg?raw=true)
+
+   **ATTENTION**: l'ip peut différencier d'une installation à l'autre. Si vous faite tout en local, vous pourriez simplement utilise **0.0.0.0** (à la palce de 192.168.1.15)
+   Pareil pour le **Chain ID**: la plupart du temps ça ne bouge pas et ça sera 0x539. Mais il se peut que quelque chose change dans l'algorithme de transformation de l'ID. Si 0x539 ne fonctionne pas, MetaMask vous indiquera la nouvelle ID. Dans le pire des cas, essayer **5777**
+
+<a id="toc-importez-un-compte-de-votre-blockchain"></a>
+### Importez un compte de votre Blockchain
+
+Pour que votre application fonctionne, il faut désormais importer un compte existant sur **Ganache**. Je vous conseille donc de prendre le premier compte de votre blockchain et de l'importer dans votre MetaMask.
+
+1. Copiez la clé:![infos](./readme/privkey.gif?raw=true)
+
+2. Importez la dans MetaMask:
+    ![infos](./readme/import.gif?raw=true)
+
+   
