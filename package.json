@@ -1,5 +1,5 @@
 {
-  "name": "Prototype HEG/DAB utilisant Truffle et Ganache",
+  "name": "heg_dab_truffle",
   "version": "1.0.0",
   "private": true,
   "scripts": {

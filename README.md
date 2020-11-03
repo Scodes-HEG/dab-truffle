@@ -1,6 +1,6 @@
 # Prototype HEG/DAB utilisant Truffle et Ganache
 
-<!-- MarkdownTOC levels="2,3" -->
+<!-- MarkdownTOC -->
 
 1. [Introduction](#toc-introduction)
 1. [Pré-requis](#toc-pr%C3%A9-requis)
@@ -11,6 +11,8 @@
 1. [Création d'une blockchain locale via Ganache](#toc-cr%C3%A9ation-dune-blockchain-locale-via-ganache)
 1. [Configurer votre projet pour pouvoir déployer localement](#toc-configurer-votre-projet-pour-pouvoir-d%C3%A9ployer-localement)
     1. [Récupérer les informations](#toc-r%C3%A9cup%C3%A9rer-les-informations)
+    1. [Éditer le fichier .env](#toc-%C3%89diter-le-fichier-env)
+    1. [Testez votre configuration](#toc-testez-votre-configuration)
 1. [Build Setup](#toc-build-setup)
 
 <!-- /MarkdownTOC -->
@@ -73,7 +75,31 @@ Dans l'image suivante, vous trouverez souligné en **rouge l'identifiant**, en *
 
 ![infos](./readme/infos.PNG?raw=true)
 
+<a id="toc-%C3%89diter-le-fichier-env"></a>
+### Éditer le fichier .env
 
+À la racine du dossier se trouve un fichier .env, celui-ci doit être modifié et vous pouvez remplacer les valeurs 
+
+- LOCAL_BLOCKCHAIN_HOST="0.0.0.0"
+- LOCAL_BLOCKCHAIN_PORT="7545"
+- LOCAL_BLOCKCHAIN_ID="5777"
+
+Par celles trouvés précédemment.
+
+<a id="toc-testez-votre-configuration"></a>
+### Testez votre configuration
+
+Rendez vous avec votre ligne de commande à la racine du dossier et lancez la commande
+
+`$ truffle migrate`
+
+Une compilation des smart contracts devrait se lancer et un déploiement sur votre blockchain local.
+
+Pour vérifier que tout est bien déployé sur votre blockchain locale, vous pouvez désormais voir les smart contracts déployés directement sur l'interface de **Ganache** sous l'onglet *Contracts*
+
+![infos](./readme/deployeds.PNG?raw=true)
+
+<a id="toc-build-setup"></a>
 
 <a id="toc-build-setup"></a>
 ## Build Setup
