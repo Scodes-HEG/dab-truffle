@@ -1,3 +1,7 @@
+import path from 'path'
+import fs from 'fs'
+
+
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -5,6 +9,10 @@ export default {
   server: {
     port: process.env.SERVER_PORT || 3000, // par défaut: 3001
     host: process.env.SERVER_HOST || "0.0.0.0", // par défaut: localhost
+    https: {
+      key: fs.readFileSync(path.resolve(__dirname, 'server.key')),
+      cert: fs.readFileSync(path.resolve(__dirname, 'server.crt'))
+    }
   },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
