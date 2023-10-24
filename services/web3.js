@@ -109,7 +109,7 @@ let pollWeb3 = function(currentStore) {
     let web3 = window.web3
 
     setInterval(function() {
-        if (web3 && localStore.state.web3.web3Instance()) {
+        if (web3 && web3.eth && localStore.state.web3.web3Instance()) {
             if (web3.eth.coinbase !== localStore.state.web3.coinbase) {
                 let newCoinbase = web3.eth.coinbase
                 web3.eth.getBalance(web3.eth.coinbase, function(err, newBalance) {
