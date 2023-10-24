@@ -2728,12 +2728,38 @@
         }
       },
       "links": {},
-      "address": "0x682a013ed1Bb6677Ec1C8EfB0795D5631923e77f",
-      "transactionHash": "0x6241ba8af26dd77d51d52651fcdafd1f982447707bf9c8264d3e39e7a7181781"
+      "address": "0x6e5FfA8F59314dF7176c7938d5c1717df8B20661",
+      "transactionHash": "0x6d3e787f5282a9f1c4d180f56eb0d41af94e5d4da422c7806a6fc5cec69bae2a"
+    },
+    "11155111": {
+      "events": {
+        "0x45e9e9b705b05a3bcdb0f6345268fb2e4a44df389a3525534d57af2e81a606bf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "_identifier",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "_pointer",
+              "type": "address"
+            }
+          ],
+          "name": "writeRegister",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x553D2ABA51918571d17cDBc09dD395702b360030",
+      "transactionHash": "0x0ab5957095b760dbe8828a75f38296c828100e5b48c84b255bbc88237fe911d5"
     }
   },
-  "schemaVersion": "3.2.5",
-  "updatedAt": "2021-04-28T07:46:53.060Z",
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2023-10-24T09:15:38.277Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

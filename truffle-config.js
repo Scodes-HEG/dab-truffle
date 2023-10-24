@@ -17,6 +17,12 @@ module.exports = {
         return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/"+env.parsed.INFURA_API_KEY)
       },
       network_id: 3
+    },
+    sepolia: {
+      provider: function() {
+        return new HDWalletProvider(mnemonic, "https://sepolia.infura.io/v3/"+env.parsed.INFURA_API_KEY);
+      },
+      network_id: 11155111
     }
   }
 

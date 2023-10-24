@@ -5,7 +5,8 @@ export const NETWORKS = {
  '4': 'Rinkeby test network',
  '42': 'Kovan test network',
  '4447': 'Truffle Develop Network',
- '5777': 'Ganache Blockchain'
+ '5777': 'Ganache Blockchain',
+ '11155111': 'Sepolia Blockchain'
 }
 
 export const NETWORKS_ETHERSCAN = {
@@ -14,5 +15,6 @@ export const NETWORKS_ETHERSCAN = {
  '4': 'rinkeby.etherscan.io',
  '42': 'kovan.etherscan.io',
  '4447': 'truffle',
- '5777': 'ganache'
+ '5777': 'ganache',
+ '11155111': 'Sepolia'
 }
