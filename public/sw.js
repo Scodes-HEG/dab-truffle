@@ -46,6 +46,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "840b232db042b2569dfb90b85cc408c0"
   },
   {
+    "url": "/_nuxt/9bf8b6c.js",
+    "revision": "7c9ee169146ad0768eaedd6db7e92d5a"
+  },
+  {
     "url": "/_nuxt/aad51dd.js",
     "revision": "33732a57e908fa3ec7752ab76221edd8"
   },
@@ -64,10 +68,6 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "/_nuxt/d22572f.js",
     "revision": "e5938bb1753a819202d1d6f8b52301ca"
-  },
-  {
-    "url": "/_nuxt/ee98afe.js",
-    "revision": "3bc412dd46799f73b0bab27c6335f18c"
   }
 ], {
   "cacheId": "heg_dab_truffle",
